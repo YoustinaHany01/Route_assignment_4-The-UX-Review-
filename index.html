@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The UX Review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800;900&family=Barlow:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════ HERO ══════════════════════════════ -->
+  <section id="hero">
+    <nav class="navbar solid-border width-80 bg-white box-shadow">
+      <div class="logo">
+        <a href="#hero">
+          <span>The UX</span>
+          <span class="text-orange-500"> Review</span>
+        </a>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li>
+            <svg class="svg-inline--fa fa-star svg-size svg-color-gray" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <path fill="currentColor" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+            </svg>
+          </li>
+          <li><a href="#latest-articles">LATEST ARTICLES</a></li>
+          <li>
+            <svg class="svg-inline--fa fa-star svg-size svg-color-gray" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <path fill="currentColor" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+            </svg>
+          </li>
+          <li><a href="#authors">AUTHORS</a></li>
+          <li>
+            <svg class="svg-inline--fa fa-star svg-size svg-color-gray" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <path fill="currentColor" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+            </svg>
+          </li>
+          <li><a href="#community">COMMUNITY</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-btn-mobile box-shadow solid-border bg-white">
+        <label for="sidebar-btn-mobile">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <input type="checkbox" id="sidebar-btn-mobile" />
+      </div>
+
+      <!-- Mobile Side Menu -->
+      <div class="mobile-overlay" id="mobile-overlay"></div>
+      <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+          <h3>MENU</h3>
+          <button class="mobile-close-btn" id="mobile-close-btn" aria-label="Close menu">✕</button>
+        </div>
+        <div class="mobile-menu-divider"></div>
+        <ul class="mobile-menu-links">
+          <li><a href="#hero">HOME</a></li>
+          <li><a href="#latest-articles">LATEST ARTICLES</a></li>
+          <li><a href="#authors">AUTHORS</a></li>
+          <li><a href="#community">COMMUNITY</a></li>
+        </ul>
+        <button class="mobile-subscribe-btn" type="button">
+          <svg class="svg-inline--fa fa-rocket mr-2 svg-size" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:16px;height:16px;margin-right:8px;">
+            <path fill="currentColor" d="M156.6 384.9L125.7 354c-8.5-8.5-11.5-20.8-7.7-32.2c3-8.9 7-20.5 11.8-33.8L24 288c-8.6 0-16.6-4.6-20.9-12.1s-4.2-16.7 .2-24.1l52.5-88.5c13-21.9 36.5-35.3 61.9-35.3l82.3 0c2.4-4 4.8-7.7 7.2-11.3C289.1-4.1 411.1-8.1 483.9 5.3c11.6 2.1 20.6 11.2 22.8 22.8c13.4 72.9 9.3 194.8-111.4 276.7c-3.5 2.4-7.3 4.8-11.3 7.2v82.3c0 25.4-13.4 49-35.3 61.9l-88.5 52.5c-7.4 4.4-16.6 4.5-24.1 .2s-12.1-12.2-12.1-20.9V380.8c-14.1 4.9-26.4 8.9-35.7 11.9c-11.2 3.6-23.4 .5-31.8-7.8zM384 168a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"></path>
+          </svg>
+          SUBSCRIBE NOW
+        </button>
+      </div>
+      <div class="SUBSCRIBE-NOW">
+        <button class="solid-border box-shadow" type="button">SUBSCRIBE NOW</button>
+      </div>
+    </nav>
+
+    <div class="container width-80">
+      <div class="hero-content">
+        <div class="trending-badge">🔥 TRENDING NOW</div>
+        <h1 class="text-shadow">
+          <span>BRUTAL</span><br />
+          <span class="text-red">THOUGHTS</span><br />
+          <span class="text-blue">BOLD IDEAS</span>
+        </h1>
+        <div class="content solid-border box-shadow">
+          <p>
+            Raw, unfiltered content about tech, design, and culture. No sugar-coating, just pure truth that hits different.
+          </p>
+        </div>
+        <button class="start-reading box-shadow solid-border" type="button">
+          <svg class="svg-inline--fa fa-rocket mr-2 svg-size" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="rocket" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor" d="M156.6 384.9L125.7 354c-8.5-8.5-11.5-20.8-7.7-32.2c3-8.9 7-20.5 11.8-33.8L24 288c-8.6 0-16.6-4.6-20.9-12.1s-4.2-16.7 .2-24.1l52.5-88.5c13-21.9 36.5-35.3 61.9-35.3l82.3 0c2.4-4 4.8-7.7 7.2-11.3C289.1-4.1 411.1-8.1 483.9 5.3c11.6 2.1 20.6 11.2 22.8 22.8c13.4 72.9 9.3 194.8-111.4 276.7c-3.5 2.4-7.3 4.8-11.3 7.2v82.3c0 25.4-13.4 49-35.3 61.9l-88.5 52.5c-7.4 4.4-16.6 4.5-24.1 .2s-12.1-12.2-12.1-20.9V380.8c-14.1 4.9-26.4 8.9-35.7 11.9c-11.2 3.6-23.4 .5-31.8-7.8zM384 168a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"></path>
+          </svg>
+          START READING
+        </button>
+        <button class="watch-intro solid-border box-shadow bg-white" type="button">
+          <svg class="svg-inline--fa fa-play mr-2 svg-size" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+            <path fill="currentColor" d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"></path>
+          </svg>
+          WATCH INTRO
+        </button>
+      </div>
+      <div class="hero-logo">
+        <div class="logo solid-border">
+          <img src="./images/e7c75b833c-f09fa794a4e1fbd04b1e.png" alt="logo" />
+          <div class="featured solid-border"><span>FEATURED</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════ LATEST ARTICLES ══════════════════════════════ -->
+  <section id="latest-articles">
+    <div class="articles-layout width-80">
+      <div class="articles-list-col">
+        <div class="section-header">
+          <h2>Latest Articles</h2>
+          <div class="fresh-badge">🔥 FRESH CONTENT</div>
+        </div>
+
+        <div class="article-card">
+          <div class="corner-badge badge-new">NEW</div>
+          <div class="article-thumb thumb-tech"><img src="./images/3.jpg" alt="Tech article" /></div>
+          <div class="article-body">
+            <div class="cat-tag cat-tech">TECH</div>
+            <h3>Why Your Website Needs More Edge</h3>
+            <p>Exploring the psychological impact of bold, unapologetic design choices on user engagement and brand perception in the digital age.</p>
+            <div class="article-meta">
+              <span>👤 BY ALEX BRUTAL</span>
+              <span>📅 JAN 8, 2025</span>
+              <span>⏱ 5 MIN READ</span>
+              <span class="likes">❤️ 127</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <div class="corner-badge badge-hot">HOT</div>
+          <div class="article-thumb thumb-design"><img src="./images/1.avif" alt="Design article" /></div>
+          <div class="article-body">
+            <div class="cat-tag cat-design">DESIGN</div>
+            <h3>Typography That Screams</h3>
+            <p>How to choose and implement bold typography that commands attention without sacrificing readability or user experience.</p>
+            <div class="article-meta">
+              <span>👤 BY ARNOLD REEVE</span>
+              <span>📅 JAN 6, 2025</span>
+              <span>⏱ 7 MIN READ</span>
+              <span class="likes">❤️ 89</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <div class="corner-badge badge-viral">VIRAL</div>
+          <div class="article-thumb thumb-culture"><img src="./images/2.jpg" alt="Culture article" /></div>
+          <div class="article-body">
+            <div class="cat-tag cat-culture">CULTURE</div>
+            <h3>The Anti-Instagram Movement</h3>
+            <p>Young creators are abandoning polished feeds for raw, authentic content that celebrates imperfection and real human connection.</p>
+            <div class="article-meta">
+              <span>👤 BY MIKE EDGE</span>
+              <span>📅 JAN 4, 2025</span>
+              <span>⏱ 4 MIN READ</span>
+              <span class="likes">❤️ 203</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="load-more-wrap">
+          <button class="load-more-btn">+ LOAD MORE ARTICLES</button>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <div class="sidebar-box">
+          <h4>Trending Now</h4>
+          <div class="trending-item">
+            <div class="trend-num num-1">01</div>
+            <div class="trend-info">
+              <h5>The Death of Minimalism</h5>
+              <div class="trend-meta">12.5K reads · <span class="trend-tag tag-trending">🔥 Trending</span></div>
+            </div>
+          </div>
+          <div class="trending-item">
+            <div class="trend-num num-2">02</div>
+            <div class="trend-info">
+              <h5>Chaos as a Design System</h5>
+              <div class="trend-meta">8.2K reads · <span class="trend-tag tag-rising">⚡ Rising</span></div>
+            </div>
+          </div>
+          <div class="trending-item">
+            <div class="trend-num num-3">03</div>
+            <div class="trend-info">
+              <h5>Digital Rebellion</h5>
+              <div class="trend-meta">6.7K reads · <span class="trend-tag tag-hot">🔴 Hot</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-box">
+          <h4>Categories</h4>
+          <div class="categories-list">
+            <div class="cat-item c1">TECH <span>(24)</span></div>
+            <div class="cat-item c2">DESIGN <span>(18)</span></div>
+            <div class="cat-item c3">CULTURE <span>(15)</span></div>
+            <div class="cat-item c4">OPINION <span>(12)</span></div>
+            <div class="cat-item c5">TUTORIALS <span>(9)</span></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════ AUTHORS ══════════════════════════════ -->
+  <section id="authors">
+    <div class="section-header">
+      <h2 class="section-title">MEET THE AUTHORS</h2>
+      <p class="section-sub">The rebels behind the brutal truth</p>
+      <div class="header-line"></div>
+    </div>
+    <div class="authors-grid">
+      <div class="author-card bg-pastel-yellow">
+        <span class="author-badge badge-founder">FOUNDER</span>
+        <div class="author-img-wrap">
+          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg" alt="Alex Brutal" />
+        </div>
+        <h3 class="author-name">ALEX BRUTAL</h3>
+        <p class="author-role">Tech Critic &amp; Design Rebel</p>
+        <div class="author-divider"></div>
+        <p class="author-bio">Destroying conventional wisdom one article at a time. 10+ years fighting the good fight against boring design and corporate BS.</p>
+        <div class="social-links">
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.254 5.622 5.91-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="author-card bg-pastel-green">
+        <span class="author-badge badge-lead">LEAD</span>
+        <div class="author-img-wrap">
+          <img src="https://the-ux-review-blog.vercel.app/assets/avatar-2-CwUcGkzI.jpg" alt="Arnold Reeve" />
+        </div>
+        <h3 class="author-name">ARNOLD REEVE</h3>
+        <p class="author-role">UX Anarchist &amp; Visual Provocateur</p>
+        <div class="author-divider"></div>
+        <p class="author-bio">Challenging design norms and creating chaos that actually works. Former corporate designer turned rebel with a cause.</p>
+        <div class="social-links">
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.254 5.622 5.91-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="author-card bg-pastel-purple">
+        <span class="author-badge badge-viral">VIRAL</span>
+        <div class="author-img-wrap">
+          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-8.jpg" alt="Mike Edge" />
+        </div>
+        <h3 class="author-name">MIKE EDGE</h3>
+        <p class="author-role">Cultural Critic &amp; Trend Destroyer</p>
+        <div class="author-divider"></div>
+        <p class="author-bio">Dissecting digital culture and exposing the truth behind viral trends. No filter, just facts that cut through the noise.</p>
+        <div class="social-links">
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.254 5.622 5.91-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════ COMMUNITY ══════════════════════════════ -->
+  <section id="community">
+    <div class="section-header">
+      <h2 class="section-title">JOIN THE REBELLION</h2>
+      <p class="section-sub">Where rebels gather to change the digital world</p>
+      <div class="header-line"></div>
+    </div>
+    <div class="community-grid width-80">
+      <div class="community-left">
+        <h3 class="community-big-title">BECOME PART OF SOMETHING BIGGER</h3>
+        <div class="desc-card solid-border">
+          Join thousands of designers, developers, and digital rebels who are tired of the same old boring content. Our community is where raw ideas meet bold execution and real change happens.
+        </div>
+        <ul class="benefits-list">
+          <li>
+            <span class="icon-wrap bg-red solid-border">
+              <svg viewBox="0 0 448 512" width="16" height="16"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+            </span>
+            <span class="benefit-text">Weekly brutal insights newsletter with exclusive content</span>
+          </li>
+          <li>
+            <span class="icon-wrap bg-blue solid-border">
+              <svg viewBox="0 0 127.14 96.36" width="16" height="16"><path fill="currentColor" d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a77.7,77.7,0,0,0,6.63-10.85,68.43,68.43,0,0,1-10.5-5c1-.73,2-1.51,3-2.31A75.12,75.12,0,0,0,96,78.21c1,.8,2,1.58,3,2.31a68.43,68.43,0,0,1-10.5,5,77.7,77.7,0,0,0,6.63,10.85,105.73,105.73,0,0,0,31.06-18.83C129.24,54.65,123.72,31.58,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.9,46,53.9,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.14,46,96.14,53,91,65.69,84.69,65.69Z"/></svg>
+            </span>
+            <span class="benefit-text">Exclusive community Discord access for real-time discussions</span>
+          </li>
+          <li>
+            <span class="icon-wrap bg-purple solid-border">
+              <svg viewBox="0 0 576 512" width="16" height="16"><path fill="currentColor" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+            </span>
+            <span class="benefit-text">Early access to new articles before they go public</span>
+          </li>
+          <li>
+            <span class="icon-wrap bg-green solid-border">
+              <svg viewBox="0 0 512 512" width="16" height="16"><path fill="currentColor" d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z"/></svg>
+            </span>
+            <span class="benefit-text">Submit your own brutal takes and get featured</span>
+          </li>
+        </ul>
+        <a href="#" class="cta-btn">
+          <svg class="svg-inline--fa fa-rocket mr-2 svg-size" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="rocket" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:16px;height:16px;margin-right:8px;vertical-align:middle;"><path fill="currentColor" d="M156.6 384.9L125.7 354c-8.5-8.5-11.5-20.8-7.7-32.2c3-8.9 7-20.5 11.8-33.8L24 288c-8.6 0-16.6-4.6-20.9-12.1s-4.2-16.7 .2-24.1l52.5-88.5c13-21.9 36.5-35.3 61.9-35.3l82.3 0c2.4-4 4.8-7.7 7.2-11.3C289.1-4.1 411.1-8.1 483.9 5.3c11.6 2.1 20.6 11.2 22.8 22.8c13.4 72.9 9.3 194.8-111.4 276.7c-3.5 2.4-7.3 4.8-11.3 7.2v82.3c0 25.4-13.4 49-35.3 61.9l-88.5 52.5c-7.4 4.4-16.6 4.5-24.1 .2s-12.1-12.2-12.1-20.9V380.8c-14.1 4.9-26.4 8.9-35.7 11.9c-11.2 3.6-23.4 .5-31.8-7.8zM384 168a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"></path></svg>
+          JOIN NOW - IT'S FREE
+        </a>
+      </div>
+      <div class="community-right">
+        <div class="testimonials-container solid-border">
+          <h3 class="testimonials-header">WHAT REBELS ARE SAYING</h3>
+          <div class="testimonials-stack">
+            <div class="testimonial-card bg-test-pink">
+              <p class="testimonial-quote">"Finally, a blog that tells it like it is. No corporate BS, just pure truth about what's really happening in tech. This is the wake-up call our industry needed."</p>
+              <div class="testimonial-author">
+                <img src="https://the-ux-review-blog.vercel.app/assets/avatar-4-EAD2OaMD.avif" alt="Mark T." />
+                <div class="t-author-info">
+                  <span class="t-author-name">Mark T.</span>
+                  <span class="t-author-role">Senior Designer at Meta</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card bg-test-blue">
+              <p class="testimonial-quote">"The UX Review changed how I think about design. It's raw, honest, and exactly what our industry needs. Every article challenges my assumptions."</p>
+              <div class="testimonial-author">
+                <img src="https://the-ux-review-blog.vercel.app/assets/avatar-5-CDQD_dyw.jpg" alt="Alex M." />
+                <div class="t-author-info">
+                  <span class="t-author-name">ALEX M.</span>
+                  <span class="t-author-role">Lead Developer at Stripe</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card bg-test-purple">
+              <p class="testimonial-quote">"The most authentic voice in digital culture. Every article challenges my assumptions and makes me think differently about the work I do."</p>
+              <div class="testimonial-author">
+                <img src="https://the-ux-review-blog.vercel.app/assets/avatar-6-CMLrVfwj.avif" alt="James K." />
+                <div class="t-author-info">
+                  <span class="t-author-name">James K.</span>
+                  <span class="t-author-role">Creative Director at Adobe</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════ FOOTER ══════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer_top">
+      <div class="footer_brand">
+        <div class="footer_logo">
+          <svg class="svg-inline--fa fa-pen-nib svg-size" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pen-nib" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor" d="M368.4 18.3L312.7 74.1 437.9 199.3l55.7-55.7c21.9-21.9 21.9-57.3 0-79.2L447.6 18.3c-21.9-21.9-57.3-21.9-79.2 0zM288 94.6l-9.2 2.8L134.7 140.6c-19.9 6-35.7 21.2-42.3 41L3.8 445.8c-3.8 11.3-1 23.9 7.3 32.4L164.7 324.7c-3-6.3-4.7-13.3-4.7-20.7c0-26.5 21.5-48 48-48s48 21.5 48 48s-21.5 48-48 48c-7.4 0-14.4-1.7-20.7-4.7L33.7 500.9c8.6 8.3 21.1 11.2 32.4 7.3l264.3-88.6c19.7-6.6 35-22.4 41-42.3l43.2-144.1 2.8-9.2L288 94.6z"></path>
+          </svg>
+          <span>THE UX REVIEW</span>
+        </div>
+        <p>Raw, unfiltered thoughts on tech, design, and digital culture. No compromise, no corporate speak, just brutal truth that matters.</p>
+      </div>
+      <div class="footer_col">
+        <h4>CATEGORIES</h4>
+        <ul>
+          <li><a href="#">TECH</a></li>
+          <li><a href="#">DESIGN</a></li>
+          <li><a href="#">CULTURE</a></li>
+          <li><a href="#">OPINION</a></li>
+          <li><a href="#">TUTORIALS</a></li>
+        </ul>
+      </div>
+      <div class="footer_col">
+        <form action="./index.html">
+          <h4>NEWSLETTER</h4>
+          <p>Get brutal insights delivered weekly. No spam, just truth that cuts through the noise.</p>
+          <input type="text" name="email" id="email" placeholder="Enter your email" class="box-shadow-white" />
+          <button class="box-shadow-white" type="submit">SUBSCRIBE</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <p>© 2025 The UX Review. ALL RIGHTS RESERVED. STAY BRUTAL.</p>
+      <div class="footer_payments">
+        <a href="#">PRIVACY POLICY</a>
+        <a href="#">TERMS OF USE</a>
+        <a href="#">COOKIE POLICY</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
